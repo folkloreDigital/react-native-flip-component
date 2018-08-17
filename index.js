@@ -48,7 +48,8 @@ class FlipComponent extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.isFlipped !== this.props.isFlipped) {
+    //if (prevProps.isFlipped !== this.props.isFlipped) {
+    if (this.animatedView._value !== this.props.isFlipped) {
       this.flip();
     }
   }
